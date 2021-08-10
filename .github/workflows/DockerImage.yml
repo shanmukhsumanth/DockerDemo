@@ -81,11 +81,14 @@ jobs:
       - name: Create service for Deployment
         run: kubectl apply -f ./Service.yml
         
-      - name: get pods
+      - name: rollout status
         run: kubectl rollout status deployment/deployment
         
-      - name: powershell
+      - name: deployment
         run: kubectl describe deployment deployment
+        
+      - name: get pods
+        run: kubectl get pods
         
       - name: Get services list
         run: kubectl get services
