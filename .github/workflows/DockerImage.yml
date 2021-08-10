@@ -85,6 +85,9 @@ jobs:
         
       - name: Get services ip
         run: minikube service list
+        
+      - name: acceess IP
+        run: curl http://192.168.49.2:80
              
              
              
