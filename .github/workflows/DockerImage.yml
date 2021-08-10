@@ -78,13 +78,13 @@ jobs:
         run: kubectl apply -f ./Service.yml
         
       - name: get pods
-        run: kubectl get pods
+        run: kubectl get po -A
         
       - name: Get services list
         run: kubectl get services
         
       - name: Get services ip
-        run: minikube service lists
+        run: minikube service list
              
              
              
