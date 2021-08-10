@@ -49,10 +49,12 @@ jobs:
       - name: Install kubectl
         run: sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
-      - name: Install Minikube
-        run: |
-             curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-             sudo install minikube-linux-amd64 /usr/local/bin/minikube
+      - name: Download Minikube
+        run: curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+      - name: Install  Minikube
+        run: sudo install minikube-linux-amd64 /usr/local/bin/minikube
+        
+        
              
              
              
