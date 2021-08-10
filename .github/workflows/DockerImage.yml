@@ -48,6 +48,13 @@ jobs:
 
       - name: Install kubectl
         run: sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+      
+      - name: Start Minikube
+        run: minikube start --driver=docker
+        
+        
+        
+        
 
       - name: Download Minikube
         run: curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
