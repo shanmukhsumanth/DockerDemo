@@ -50,4 +50,4 @@ jobs:
         run: sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
       - name: Verify kubectl
-        run: kubectl version --client
+        run: kubectl cluster-info
