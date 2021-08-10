@@ -52,17 +52,22 @@ jobs:
 
       - name: Download the latest release with the command
         run: curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-
-      - name: Install kubectl
-        run: sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl    
-        
+      
       - name: Download Minikube
         run: curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+        
       - name: Install  Minikube
         run: sudo install minikube-linux-amd64 /usr/local/bin/minikube
         
       - name: Start Minikube
         run: minikube start --driver=docker
+      
+      
+      - name: Install kubectl
+        run: sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl    
+        
+      - name: verify Kubectl
+        run: kubectl cluster-info
        
       - name: Create a Secret
         run: kubectl create secret generic regcred --from-file=/home/runner/.docker/config.json
