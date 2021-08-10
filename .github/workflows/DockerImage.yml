@@ -90,8 +90,8 @@ jobs:
       - name: get pods
         run: kubectl get pods
         
-      - name: describe pod
-        run: kubectl describe pods deployment-*
+#       - name: describe pod
+#         run: kubectl describe pods deployment-*
         
       - name: Get services list
         run: kubectl get services
