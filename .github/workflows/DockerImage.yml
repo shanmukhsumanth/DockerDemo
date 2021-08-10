@@ -68,8 +68,7 @@ jobs:
         run: kubectl create secret generic regcred --from-file=/home/runner/.docker/config.json
         
       - name: powershell
-        run: |
-           Get-ChildItem -path "/home/runner" 
+        run: Get-ChildItem -path "/home/runner/" 
         
         
       - name: Create deployment pods
