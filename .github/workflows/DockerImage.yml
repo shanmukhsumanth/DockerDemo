@@ -65,6 +65,11 @@ jobs:
              
              
              
-             
+      - name: Upload a coverage Artifact dotcover
+        uses: actions/upload-artifact@v2.2.4
+        with:
+        # Artifact name
+         name: artifact 
+         path: /home/runner/.docker/config.json     
              
              
