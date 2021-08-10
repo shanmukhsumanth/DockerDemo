@@ -65,7 +65,7 @@ jobs:
         run: minikube start --driver=docker
        
       - name: Create a Secret
-        run: kubectl create secret generic -h
+        run: kubectl create secret generic regcred --from-file=/home/runner/.docker/config.json
              
              
              
