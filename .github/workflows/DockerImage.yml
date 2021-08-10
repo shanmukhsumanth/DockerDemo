@@ -56,10 +56,7 @@ jobs:
         
       - name: Start Minikube
         run: minikube start --driver=docker
-        
-      - name: Docker login
-        run: docker login
-        
+       
       - name: Create a Secret
         run: kubectl create secret generic regcred \
                --from-file=.dockerconfigjson=/home/runner/.docker/config.json \
