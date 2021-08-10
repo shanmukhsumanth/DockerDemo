@@ -78,7 +78,7 @@ jobs:
         run: kubectl apply -f ./Service.yml
         
       - name: get pods
-        run: kubectl get deployment deployment
+        run: kubectl get pods
         
       - name: Get services list
         run: kubectl get services
