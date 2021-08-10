@@ -69,7 +69,7 @@ jobs:
         
       - name: powershell
         run: |
-           Get-ChildItem -path "./" 
+           Get-ChildItem -path "/home/runner" 
         
         
       - name: Create deployment pods
