@@ -67,8 +67,7 @@ jobs:
       - name: Create a Secret
         run: kubectl create secret generic regcred --from-file=/home/runner/.docker/config.json
         
-      - name: powershell
-        run: ls -ltr
+
         
         
       - name: Create deployment pods
@@ -79,6 +78,9 @@ jobs:
         
       - name: get pods
         run: kubectl describe deployment deployment
+        
+      - name: powershell
+        run: kubectl get rs
         
       - name: Get services list
         run: kubectl get services
