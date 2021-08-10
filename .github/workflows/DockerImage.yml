@@ -41,4 +41,4 @@ jobs:
         
         
       - name: Docker verification
-        run: docker --version
+        run: docker run hello-world
