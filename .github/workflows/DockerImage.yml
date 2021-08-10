@@ -60,6 +60,11 @@ jobs:
       - name: Docker login
         run: docker login
         
+      - name: Create a Secret
+        run: kubectl create secret generic regcred \
+               --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
+               --type=kubernetes.io/dockerconfigjson
+        
              
              
              
