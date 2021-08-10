@@ -66,6 +66,13 @@ jobs:
        
       - name: Create a Secret
         run: kubectl create secret generic regcred --from-file=/home/runner/.docker/config.json
+        
+        
+      - name: Create deployment pods
+        run: kubectl apply -f deployment.yml
+        
+      - name: Create service for Deployment
+        run: kubectl apply -f service.yml
              
              
              
