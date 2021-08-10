@@ -82,7 +82,7 @@ jobs:
         run: kubectl apply -f ./Service.yml
         
       - name: get pods
-        run: kubectl get pods
+        run: kubectl rollout status deployment/deployment
         
       - name: powershell
         run: kubectl describe deployment deployment
