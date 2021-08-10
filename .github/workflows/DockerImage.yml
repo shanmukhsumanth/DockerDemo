@@ -90,11 +90,17 @@ jobs:
       - name: get pods
         run: kubectl get pods
         
+      - name: describe pod
+        run: kubctl describe pod deployment-65ff9d45cc-cccbd
+        
       - name: Get services list
         run: kubectl get services
         
       - name: Get services ip
         run: minikube service list
+        
+      - name: See IP
+        run: curl http://localhost:80
         
              
              
