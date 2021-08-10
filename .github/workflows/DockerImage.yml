@@ -91,7 +91,7 @@ jobs:
         run: kubectl get pods
         
       - name: describe pod
-        run: kubctl describe pod deployment-65ff9d45cc-cccbd
+        run: kubctl describe pod deployment-*
         
       - name: Get services list
         run: kubectl get services
