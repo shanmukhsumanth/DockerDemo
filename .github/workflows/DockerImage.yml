@@ -77,7 +77,7 @@ jobs:
         run: kubectl apply -f ./Service.yml
         
       - name: get pods
-        run: kubectl describe deployment deployment
+        run: cat /etc/kubernetes/apiserver
         
       - name: powershell
         run: kubectl get rs
