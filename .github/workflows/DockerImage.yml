@@ -62,7 +62,7 @@ jobs:
         
       - name: Create a Secret
         run: kubectl create secret generic regcred \
-               --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
+               --from-file=.dockerconfigjson=/home/runner/.docker/config.json \
                --type=kubernetes.io/dockerconfigjson
         
              
