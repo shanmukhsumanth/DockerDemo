@@ -106,6 +106,6 @@ jobs:
         run: hostname -i
         
       - name: See IP
-        run: curl  http://192.168.49.2:80
+        run: curl  http://10.1.0.75:80
         
                           
