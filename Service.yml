@@ -8,7 +8,7 @@ spec:
 
   ports:
     - protocol: TCP
-      port: 7104
+      port: 80
       targetPort: 7104
       nodePort: 7104
 
