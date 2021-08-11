@@ -99,7 +99,10 @@ jobs:
       - name: Get services ip
         run: minikube service list
         
+      - name: host IP
+        run: hostname -i
+        
       - name: See IP
-        run: curl http://192.168.49.2:80
+        run: curl http://localhost:80
         
                           
