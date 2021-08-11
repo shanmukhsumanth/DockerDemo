@@ -9,7 +9,7 @@ spec:
   ports:
     - protocol: HTTP
       port: 80
-      targetPort: 30428
+      targetPort: 80
       nodePort: 30428
 
 
