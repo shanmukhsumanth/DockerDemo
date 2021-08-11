@@ -7,10 +7,10 @@ spec:
     app: nginx
 
   ports:
-    - protocol: TCP
+    - protocol: HTTP
       port: 80
-      targetPort: 7104
-      nodePort: 7104
+      targetPort: 30428
+      nodePort: 30428
 
 
   type: NodePort
