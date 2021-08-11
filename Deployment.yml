@@ -20,7 +20,7 @@ spec:
         command: [ "/bin/sh", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
         ports:
-        - containerPort: 80
+        - containerPort: 7104
       restartPolicy: Always
       imagePullSecrets:
       - name: regcred
